@@ -11,9 +11,9 @@
 @implementation AlertUtil
 @synthesize cancelTitle,okTitle;
 
+static BOOL cancelButtonFlag = NO;
 static UIAlertView *alertView = nil;
-
-
+static NSArray *moreButton = nil;
 static AlertUtil *sharedUtil = nil;
 static dispatch_once_t m_onceToken;
 
@@ -21,7 +21,7 @@ static dispatch_once_t m_onceToken;
 {
     dispatch_once(&m_onceToken, ^{
         sharedUtil = [[self alloc] init];
-        
+    
     });
     [sharedUtil initial];
     return sharedUtil;
@@ -33,21 +33,15 @@ static dispatch_once_t m_onceToken;
     self.okTitle = @"OK";
 }
 -(UIAlertView *)instanceWithTitle:(NSString *)title message:(NSString *)message{
-    
     UIAlertView *instance = [[UIAlertView alloc]initWithTitle:title
                                                       message:message
                                                      delegate:self
-                                            cancelButtonTitle:cancelTitle
-                                            otherButtonTitles:okTitle, nil];
-    alertView = instance;
-    return instance;
-}
--(UIAlertView *)instanceOkOnlyWithTitle:(NSString *)title message:(NSString *)message{
-    UIAlertView *instance = [[UIAlertView alloc]initWithTitle:title
-                                                      message:message
-                                                     delegate:self
-                                            cancelButtonTitle:nil
-                                            otherButtonTitles:okTitle, nil];
+                                            cancelButtonTitle:(cancelButtonFlag == YES)?nil:cancelTitle
+                                            otherButtonTitles:nil];
+    [instance addButtonWithTitle:okTitle];
+    for( NSString *title in moreButton)  {
+        [instance addButtonWithTitle:title];
+    }
     alertView = instance;
     return instance;
 }
@@ -71,8 +65,17 @@ static dispatch_once_t m_onceToken;
          self.handler(buttonIndex);
     }
 }
-
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    cancelButtonFlag = NO;
+    moreButton = nil;
+}
 +(UIAlertView *)currentAlertView{
     return alertView;
+}
++(void)disableCancelButton:(BOOL)status{
+    cancelButtonFlag = status;
+}
++(void)addMoreButton:(NSArray *)buttons{
+    moreButton = buttons;
 }
 @end

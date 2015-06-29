@@ -13,11 +13,14 @@
 
 @property(nonatomic,strong)NSString *cancelTitle;
 @property(nonatomic,strong)NSString *okTitle;
-@property (nonatomic, copy) void (^handler)(NSInteger buttonNumber);
+@property(nonatomic,strong)id parseObject;
+@property(nonatomic, copy) void (^handler)(NSInteger buttonNumber);
 
 +(UIAlertView *)currentAlertView;
 + (AlertUtil *)sharedUtil;
 
++(void)disableCancelButton:(BOOL)status;
++(void)addMoreButton:(NSArray *)buttons;
 +(void)alertWithMessage:(NSString *)message
           clickHandler:(void (^)(NSInteger buttonNumber))handler;
 +(void)alertWithTitle:(NSString *)title

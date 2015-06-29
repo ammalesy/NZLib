@@ -10,7 +10,7 @@
 		527756721B40E42700A68671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527756711B40E42700A68671 /* main.m */; };
 		527756751B40E42700A68671 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527756741B40E42700A68671 /* AppDelegate.m */; };
 		527756781B40E42700A68671 /* NZLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527756761B40E42700A68671 /* NZLib.xcdatamodeld */; };
-		5277567B1B40E42700A68671 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277567A1B40E42700A68671 /* ViewController.m */; };
+		5277567B1B40E42700A68671 /* ExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277567A1B40E42700A68671 /* ExampleController.m */; };
 		5277567E1B40E42700A68671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277567C1B40E42700A68671 /* Main.storyboard */; };
 		527756801B40E42700A68671 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5277567F1B40E42700A68671 /* Images.xcassets */; };
 		527756831B40E42700A68671 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527756811B40E42700A68671 /* LaunchScreen.xib */; };
@@ -35,8 +35,8 @@
 		527756731B40E42700A68671 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		527756741B40E42700A68671 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		527756771B40E42700A68671 /* NZLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NZLib.xcdatamodel; sourceTree = "<group>"; };
-		527756791B40E42700A68671 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5277567A1B40E42700A68671 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		527756791B40E42700A68671 /* ExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleController.h; sourceTree = "<group>"; };
+		5277567A1B40E42700A68671 /* ExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleController.m; sourceTree = "<group>"; };
 		5277567D1B40E42700A68671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5277567F1B40E42700A68671 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		527756821B40E42700A68671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				5277569A1B40E54600A68671 /* Util */,
 				527756731B40E42700A68671 /* AppDelegate.h */,
 				527756741B40E42700A68671 /* AppDelegate.m */,
-				527756791B40E42700A68671 /* ViewController.h */,
-				5277567A1B40E42700A68671 /* ViewController.m */,
+				527756791B40E42700A68671 /* ExampleController.h */,
+				5277567A1B40E42700A68671 /* ExampleController.m */,
 				5277567C1B40E42700A68671 /* Main.storyboard */,
 				5277567F1B40E42700A68671 /* Images.xcassets */,
 				527756811B40E42700A68671 /* LaunchScreen.xib */,
@@ -237,7 +237,7 @@
 			files = (
 				527756781B40E42700A68671 /* NZLib.xcdatamodeld in Sources */,
 				527756751B40E42700A68671 /* AppDelegate.m in Sources */,
-				5277567B1B40E42700A68671 /* ViewController.m in Sources */,
+				5277567B1B40E42700A68671 /* ExampleController.m in Sources */,
 				5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */,
 				527756721B40E42700A68671 /* main.m in Sources */,
 			);
@@ -430,6 +430,7 @@
 				527756941B40E42700A68671 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		527756951B40E42700A68671 /* Build configuration list for PBXNativeTarget "NZLibTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +439,7 @@
 				527756971B40E42700A68671 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
