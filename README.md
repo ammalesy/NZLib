@@ -16,14 +16,14 @@
 > Show alert view with other button
 ```objective-c
 [AlertUtil addMoreButton:@[@"Button1",@"Button2",@"Button3"]];
-[AlertUtil alertWithMessage:[self featureString:feature] clickHandler:^(NSInteger buttonNumber) {
+[AlertUtil alertWithMessage:@"Message" clickHandler:^(NSInteger buttonNumber) {
     // Do something when clicked on button.
 }];
 ```
 > Show alert view without cancel button.
 ```objective-c
 [AlertUtil disableCancelButton:YES];
-[AlertUtil alertWithMessage:[self featureString:feature] clickHandler:^(NSInteger buttonNumber) {
+[AlertUtil alertWithMessage:@"Message" clickHandler:^(NSInteger buttonNumber) {
     // Do something when clicked on button.
 }];
 ```
