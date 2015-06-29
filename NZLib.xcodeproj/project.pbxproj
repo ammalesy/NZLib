@@ -15,6 +15,7 @@
 		527756801B40E42700A68671 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5277567F1B40E42700A68671 /* Images.xcassets */; };
 		527756831B40E42700A68671 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527756811B40E42700A68671 /* LaunchScreen.xib */; };
 		5277568F1B40E42700A68671 /* NZLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277568E1B40E42700A68671 /* NZLibTests.m */; };
+		5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277569C1B40E55F00A68671 /* AlertUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		527756881B40E42700A68671 /* NZLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NZLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5277568D1B40E42700A68671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5277568E1B40E42700A68671 /* NZLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NZLibTests.m; sourceTree = "<group>"; };
+		5277569B1B40E55F00A68671 /* AlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
+		5277569C1B40E55F00A68671 /* AlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		5277566E1B40E42700A68671 /* NZLib */ = {
 			isa = PBXGroup;
 			children = (
+				5277569A1B40E54600A68671 /* Util */,
 				527756731B40E42700A68671 /* AppDelegate.h */,
 				527756741B40E42700A68671 /* AppDelegate.m */,
 				527756791B40E42700A68671 /* ViewController.h */,
@@ -120,6 +124,15 @@
 				5277568D1B40E42700A68671 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5277569A1B40E54600A68671 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5277569B1B40E55F00A68671 /* AlertUtil.h */,
+				5277569C1B40E55F00A68671 /* AlertUtil.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +238,7 @@
 				527756781B40E42700A68671 /* NZLib.xcdatamodeld in Sources */,
 				527756751B40E42700A68671 /* AppDelegate.m in Sources */,
 				5277567B1B40E42700A68671 /* ViewController.m in Sources */,
+				5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */,
 				527756721B40E42700A68671 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
