@@ -26,8 +26,6 @@ static dispatch_once_t m_onceToken;
     [sharedUtil initial];
     return sharedUtil;
 }
-
-
 -(void)initial{
     self.cancelTitle = @"Cancel";
     self.okTitle = @"OK";

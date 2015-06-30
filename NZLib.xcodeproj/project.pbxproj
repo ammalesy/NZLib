@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521D44931B428F4A002E03BC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44921B428F4A002E03BC /* bg.png */; };
+		521D44951B4295EB002E03BC /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44941B4295EB002E03BC /* cross.png */; };
+		521D44991B429B05002E03BC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44981B429B05002E03BC /* logo.png */; };
+		524D8C0B1B423665004A8FEE /* NZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524D8C0A1B423665004A8FEE /* NZLoginController.m */; };
+		524D8C0D1B42367E004A8FEE /* LoginSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D8C0C1B42367E004A8FEE /* LoginSB.storyboard */; };
 		527756721B40E42700A68671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527756711B40E42700A68671 /* main.m */; };
 		527756751B40E42700A68671 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527756741B40E42700A68671 /* AppDelegate.m */; };
 		527756781B40E42700A68671 /* NZLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527756761B40E42700A68671 /* NZLib.xcdatamodeld */; };
@@ -29,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521D44921B428F4A002E03BC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		521D44941B4295EB002E03BC /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		521D44981B429B05002E03BC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		524D8C091B423665004A8FEE /* NZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZLoginController.h; sourceTree = "<group>"; };
+		524D8C0A1B423665004A8FEE /* NZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZLoginController.m; sourceTree = "<group>"; };
+		524D8C0C1B42367E004A8FEE /* LoginSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSB.storyboard; sourceTree = "<group>"; };
 		5277566C1B40E42700A68671 /* NZLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527756701B40E42700A68671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527756711B40E42700A68671 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +76,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524D8C081B423648004A8FEE /* ControllerUtil */ = {
+			isa = PBXGroup;
+			children = (
+				521D44921B428F4A002E03BC /* bg.png */,
+				521D44981B429B05002E03BC /* logo.png */,
+				524D8C091B423665004A8FEE /* NZLoginController.h */,
+				524D8C0A1B423665004A8FEE /* NZLoginController.m */,
+				521D44941B4295EB002E03BC /* cross.png */,
+				524D8C0C1B42367E004A8FEE /* LoginSB.storyboard */,
+			);
+			path = ControllerUtil;
+			sourceTree = "<group>";
+		};
 		527756631B40E42700A68671 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5277569A1B40E54600A68671 /* Util */,
+				524D8C081B423648004A8FEE /* ControllerUtil */,
 				527756731B40E42700A68671 /* AppDelegate.h */,
 				527756741B40E42700A68671 /* AppDelegate.m */,
 				527756791B40E42700A68671 /* ExampleController.h */,
@@ -215,9 +240,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521D44951B4295EB002E03BC /* cross.png in Resources */,
 				5277567E1B40E42700A68671 /* Main.storyboard in Resources */,
 				527756831B40E42700A68671 /* LaunchScreen.xib in Resources */,
+				521D44931B428F4A002E03BC /* bg.png in Resources */,
+				521D44991B429B05002E03BC /* logo.png in Resources */,
 				527756801B40E42700A68671 /* Images.xcassets in Resources */,
+				524D8C0D1B42367E004A8FEE /* LoginSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +269,7 @@
 				5277567B1B40E42700A68671 /* ExampleController.m in Sources */,
 				5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */,
 				527756721B40E42700A68671 /* main.m in Sources */,
+				524D8C0B1B423665004A8FEE /* NZLoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

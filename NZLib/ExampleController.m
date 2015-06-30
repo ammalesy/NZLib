@@ -8,14 +8,20 @@
 
 #import "ExampleController.h"
 #import "AlertUtil.h"
+#import "NZLoginController.h"
 
 typedef NS_ENUM(NSInteger, Feature) {
-    FeatureAlertUtil = 0
+    FeatureAlertUtil = 0,
+    FeatureLoginController = 1
 };
+
+typedef void(^FeatureBlock)(void);
 
 @interface ExampleController ()
 {
     NSMutableArray *list;
+    FeatureBlock featureAlertUtil;
+    FeatureBlock featureLoginController;
 }
 @end
 
@@ -24,8 +30,23 @@ typedef NS_ENUM(NSInteger, Feature) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     list = [[NSMutableArray alloc]init];
-    
     [list addObject:[NSNumber numberWithInt:FeatureAlertUtil]];
+    [list addObject:[NSNumber numberWithInt:FeatureLoginController]];
+    
+    featureAlertUtil = ^(void){
+        [AlertUtil addMoreButton:@[@"Button1",@"Button2",@"Button3"]];
+        [AlertUtil alertWithMessage:@"Hello World!" clickHandler:^(NSInteger buttonNumber) {
+            
+        }];
+    };
+    __block UIViewController *this = self;
+    featureLoginController = ^(void){
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LoginSB" bundle:nil];
+        NZLoginController *controller = [sb instantiateViewControllerWithIdentifier:@"LoginSB"];
+        [this.navigationController presentViewController:controller animated:YES completion:^{
+            
+        }];
+    };
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -42,15 +63,18 @@ typedef NS_ENUM(NSInteger, Feature) {
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Feature feature = [[list objectAtIndex:indexPath.row] intValue];
     if (feature == FeatureAlertUtil) {
-        [AlertUtil alertWithMessage:[self featureString:feature] clickHandler:^(NSInteger buttonNumber) {
-
-        }];
+        featureAlertUtil();
+    }else if (feature == FeatureLoginController) {
+        featureLoginController();
     }
 }
 -(NSString *)featureString:(Feature)feature{
     switch (feature) {
         case FeatureAlertUtil:
             return @"AlertUtil";
+            break;
+        case FeatureLoginController:
+            return @"LoginController";
             break;
     }
 }
