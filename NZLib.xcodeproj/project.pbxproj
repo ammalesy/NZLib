@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521D44931B428F4A002E03BC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44921B428F4A002E03BC /* bg.png */; };
 		521D44951B4295EB002E03BC /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44941B4295EB002E03BC /* cross.png */; };
-		521D44991B429B05002E03BC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 521D44981B429B05002E03BC /* logo.png */; };
 		524D8C0B1B423665004A8FEE /* NZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524D8C0A1B423665004A8FEE /* NZLoginController.m */; };
 		524D8C0D1B42367E004A8FEE /* LoginSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D8C0C1B42367E004A8FEE /* LoginSB.storyboard */; };
 		527756721B40E42700A68671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527756711B40E42700A68671 /* main.m */; };
@@ -34,9 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		521D44921B428F4A002E03BC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		521D44941B4295EB002E03BC /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
-		521D44981B429B05002E03BC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		524D8C091B423665004A8FEE /* NZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZLoginController.h; sourceTree = "<group>"; };
 		524D8C0A1B423665004A8FEE /* NZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZLoginController.m; sourceTree = "<group>"; };
 		524D8C0C1B42367E004A8FEE /* LoginSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSB.storyboard; sourceTree = "<group>"; };
@@ -79,8 +75,6 @@
 		524D8C081B423648004A8FEE /* ControllerUtil */ = {
 			isa = PBXGroup;
 			children = (
-				521D44921B428F4A002E03BC /* bg.png */,
-				521D44981B429B05002E03BC /* logo.png */,
 				524D8C091B423665004A8FEE /* NZLoginController.h */,
 				524D8C0A1B423665004A8FEE /* NZLoginController.m */,
 				521D44941B4295EB002E03BC /* cross.png */,
@@ -243,8 +237,6 @@
 				521D44951B4295EB002E03BC /* cross.png in Resources */,
 				5277567E1B40E42700A68671 /* Main.storyboard in Resources */,
 				527756831B40E42700A68671 /* LaunchScreen.xib in Resources */,
-				521D44931B428F4A002E03BC /* bg.png in Resources */,
-				521D44991B429B05002E03BC /* logo.png in Resources */,
 				527756801B40E42700A68671 /* Images.xcassets in Resources */,
 				524D8C0D1B42367E004A8FEE /* LoginSB.storyboard in Resources */,
 			);

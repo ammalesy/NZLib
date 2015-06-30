@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NZLoginController : UIViewController
+@interface NZLoginController : UIViewController //
 
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
