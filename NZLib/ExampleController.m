@@ -29,6 +29,7 @@ typedef void(^FeatureBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __block UIViewController *this = self;
     list = [[NSMutableArray alloc]init];
     [list addObject:[NSNumber numberWithInt:FeatureAlertUtil]];
     [list addObject:[NSNumber numberWithInt:FeatureLoginController]];
@@ -39,7 +40,7 @@ typedef void(^FeatureBlock)(void);
             
         }];
     };
-    __block UIViewController *this = self;
+    
     featureLoginController = ^(void){
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LoginSB" bundle:nil];
         NZLoginController *controller = [sb instantiateViewControllerWithIdentifier:@"LoginSB"];

@@ -19,6 +19,8 @@
 		527756831B40E42700A68671 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527756811B40E42700A68671 /* LaunchScreen.xib */; };
 		5277568F1B40E42700A68671 /* NZLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277568E1B40E42700A68671 /* NZLibTests.m */; };
 		5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277569C1B40E55F00A68671 /* AlertUtil.m */; };
+		52D4311A1B462D3100D96D60 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D431171B462D3100D96D60 /* GCDAsyncSocket.m */; };
+		52D4311B1B462D3100D96D60 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D431191B462D3100D96D60 /* GCDAsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		5277568E1B40E42700A68671 /* NZLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NZLibTests.m; sourceTree = "<group>"; };
 		5277569B1B40E55F00A68671 /* AlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
 		5277569C1B40E55F00A68671 /* AlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
+		52D431161B462D3100D96D60 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		52D431171B462D3100D96D60 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		52D431181B462D3100D96D60 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		52D431191B462D3100D96D60 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		5277566E1B40E42700A68671 /* NZLib */ = {
 			isa = PBXGroup;
 			children = (
+				52D431131B462D3100D96D60 /* 3rdParty */,
 				5277569A1B40E54600A68671 /* Util */,
 				524D8C081B423648004A8FEE /* ControllerUtil */,
 				527756731B40E42700A68671 /* AppDelegate.h */,
@@ -152,6 +159,33 @@
 				5277569C1B40E55F00A68671 /* AlertUtil.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		52D431131B462D3100D96D60 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				52D431141B462D3100D96D60 /* CocoaAsyncSocket */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		52D431141B462D3100D96D60 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				52D431151B462D3100D96D60 /* GCD */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		52D431151B462D3100D96D60 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				52D431161B462D3100D96D60 /* GCDAsyncSocket.h */,
+				52D431171B462D3100D96D60 /* GCDAsyncSocket.m */,
+				52D431181B462D3100D96D60 /* GCDAsyncUdpSocket.h */,
+				52D431191B462D3100D96D60 /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +294,9 @@
 				527756751B40E42700A68671 /* AppDelegate.m in Sources */,
 				5277567B1B40E42700A68671 /* ExampleController.m in Sources */,
 				5277569D1B40E55F00A68671 /* AlertUtil.m in Sources */,
+				52D4311B1B462D3100D96D60 /* GCDAsyncUdpSocket.m in Sources */,
 				527756721B40E42700A68671 /* main.m in Sources */,
+				52D4311A1B462D3100D96D60 /* GCDAsyncSocket.m in Sources */,
 				524D8C0B1B423665004A8FEE /* NZLoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
