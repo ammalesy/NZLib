@@ -29,7 +29,7 @@ typedef void(^FeatureBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    __block UIViewController *this = self;
+    __block UIViewController<NZLoginHandleEventDelegate,NZLoginViewDelegate> *this = self;
     list = [[NSMutableArray alloc]init];
     [list addObject:[NSNumber numberWithInt:FeatureAlertUtil]];
     [list addObject:[NSNumber numberWithInt:FeatureLoginController]];
@@ -42,12 +42,16 @@ typedef void(^FeatureBlock)(void);
     };
     
     featureLoginController = ^(void){
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LoginSB" bundle:nil];
-        NZLoginController *controller = [sb instantiateViewControllerWithIdentifier:@"LoginSB"];
+        NZLoginController *controller = [NZLoginController controllerWithViewDelegate:this
+                                                                  handleEventDelegate:this];
         [this.navigationController presentViewController:controller animated:YES completion:^{
             
         }];
     };
+}
+-(void)NZLoginViewDidLoad:(NZLoginController *)controller{
+
+    
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NZLoginController.h"
 
-
-@interface ExampleController : UITableViewController
+@interface ExampleController : UITableViewController<NZLoginViewDelegate,NZLoginHandleEventDelegate>
 
 
 @end

@@ -12,27 +12,49 @@
 
 @end
 
-@implementation NZLoginController //
+@implementation NZLoginController
 
++(NZLoginController *)controller{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LoginSB" bundle:nil];
+    return [sb instantiateViewControllerWithIdentifier:@"LoginSB"];
+}
++(NZLoginController *)controllerWithViewDelegate:(id<NZLoginViewDelegate>)viewDelegate
+                                  handleEventDelegate:(id<NZLoginHandleEventDelegate>)handleEventDelegate{
+    NZLoginController *controller = [NZLoginController controller];
+    controller.handleDelegate = handleEventDelegate;
+    controller.viewDelegate = viewDelegate;
+    return controller;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if ([[self viewDelegate] respondsToSelector:@selector(NZLoginViewDidLoad:)]) {
+        [[self viewDelegate] NZLoginViewDidLoad:self];
+    }
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([[self viewDelegate] respondsToSelector:@selector(NZLoginViewWillAppear:)]) {
+        [[self viewDelegate] NZLoginViewWillAppear:self];
+    }
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([[self viewDelegate] respondsToSelector:@selector(NZLoginViewDidAppear:)]) {
+        [[self viewDelegate] NZLoginViewDidAppear:self];
+    }
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if ([[self viewDelegate] respondsToSelector:@selector(NZLoginViewDidDisappear:)]) {
+        [[self viewDelegate] NZLoginViewDidDisappear:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)signIn:(id)sender {
 }
